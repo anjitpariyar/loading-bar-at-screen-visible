@@ -1,0 +1,71 @@
+//html
+
+<h2>information <span></span> </h2>
+
+//css
+@keyframes footerborder{
+	0%,25% {
+		width: 100%
+	}
+
+	100%{
+		width: 13%;
+	}
+}
+@keyframes reversefootborder{
+	0%,25% {
+		width: 13%
+	}
+
+	100%{
+		width: 100%;
+	}
+}
+footer h2{
+				color: #fff;
+				border-bottom: 1px solid #434343;
+				position: relative;
+				padding-bottom: 7px;
+				transition: .5s ease;
+				width: 72%;
+				margin-top: 21px;
+			}
+
+			footer h2 span{
+				position: absolute;
+				content: " ";
+				border: 2px solid var(--lite-golden);
+				bottom: -1.75px;
+				width: 100%;
+				border-radius: 0 18px 18px 0;
+				left: 0;
+
+
+
+			}
+      
+// js
+
+$(window).scroll(function(){
+
+
+  var wScroll = $(this).scrollTop();
+  if($('footer h2').visible(true)) {
+    $('footer h2 span').css({'animation':'footerborder 3s forwards ease-in-out',
+  });
+  }
+  else{
+    $('footer h2 span').css({'animation':'reversefootborder 3s ',
+  });
+  }
+
+  
+
+
+});
+
+
+});
+
+
+
